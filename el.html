@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dailect Institute of Language</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #2c3e50;
+            padding: 15px 0;
+            z-index: 1000;
+        }
+
+        header .logo {
+            color: white;
+            text-align: center;
+            font-size: 28px;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-evenly;
+            width: 60%;
+        }
+
+        header nav ul li {
+            padding: 12px 20px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            background-color: #3498db;
+            color: white;
+            border-radius: 5px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://source.unsplash.com/random/1600x900?language') center center/cover no-repeat;
+            text-align: center;
+            color: white;
+            padding: 150px 10px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+        }
+
+        .hero .cta-btn {
+            font-size: 1.2rem;
+            padding: 15px 30px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .hero .cta-btn:hover {
+            background-color: #218838;
+        }
+
+        /* About Section */
+        .about {
+            padding: 60px 10%;
+            background-color: #ffffff;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 1rem;
+            color: #34495e;
+            line-height: 1.8;
+        }
+
+        /* Features Section */
+        .features {
+            background-color: #ecf0f1;
+            padding: 80px 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .feature-box {
+            width: 25%;
+            padding: 20px;
+            background-color: white;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-box p {
+            font-size: 1rem;
+            color: #34495e;
+        }
+
+        /* Contact Form */
+        .contact {
+            padding: 60px 10%;
+            background-color: #ffffff;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact form input, .contact form textarea {
+            width: 70%;
+            margin-bottom: 15px;
+            padding: 12px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .contact form button {
+            width: 70%;
+            padding: 12px;
+            font-size: 1.2rem;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact form button:hover {
+            background-color: #218838;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #34495e;
+            color: white;
+        }
+
+        /* Mobile Styling */
+        @media screen and (max-width: 768px) {
+            .hero {
+                padding: 100px 15px;
+            }
+
+            header nav ul {
+                flex-direction: column;
+                margin-top: 0;
+            }
+
+            header nav ul li {
+                padding: 10px 0;
+            }
+
+            .about, .contact {
+                padding: 60px 10%;
+            }
+
+            .features {
+                flex-direction: column;
+                text-align: center;
+                padding: 60px 0;
+            }
+
+            .feature-box {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="logo">
+        <h1>Dailect Institute of language</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <h1>Learn a New Language with Confidence</h1>
+    <p>Your journey to mastering new languages starts here.</p>
+    <a href="#contact" class="cta-btn">Get in Touch</a>
+</section>
+
+<!-- About Section -->
+<section class="about" id="about">
+    <h2>About Dailect Institute</h2>
+    <p>At Dailect, we offer language courses that are tailored to meet your specific needs. Our instructors have years of experience teaching various languages using effective techniques.</p>
+</section>
+
+<!-- Features Section -->
+<section class="features">
+    <div class="feature-box">
+        <h3>Experienced Instructors</h3>
+        <p>Learn from certified professionals who are passionate about teaching.</p>
+    </div>
+    <div class="feature-box">
+        <h3>Personalized Courses</h3>
+        <p>Choose from our wide range of language learning programs that fit your level and learning style.</p>
+    </div>
+    <div class="feature-box">
+        <h3>Global Community</h3>
+        <p>Join our international network of learners and teachers.</p>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" placeholder="Your Message" rows="6" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Dailect Institute of Language | All Rights Reserved</p>
+</footer>
+
+<!-- JavaScript -->
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute("href")).scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        });
+    });
+
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        
+        if (name && email && message) {
+            alert(`Thank you, ${name}. Your message has been sent!`);
+        } else {
+            alert('Please fill in all the fields.');
+        }
+    });
+</script>
+</body>
+</html>
